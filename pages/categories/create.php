@@ -16,7 +16,7 @@ $pageSubtitle = 'Buat kategori baru untuk mengelompokkan buku';
     <main class="app-main">
   <?php require __DIR__ . '/../../components/admin/topbar.php'; ?>
       <div class="app-content">
-        <form method="" action="">
+        <form method="post" action="../../actions/categories/store.php"></form>
           <div class="form-card">
             <div class="form-section-title">Data Kategori</div>
             <div class="form-group">
@@ -30,7 +30,7 @@ $pageSubtitle = 'Buat kategori baru untuk mengelompokkan buku';
 
             <div class="form-actions">
               <a href="index.php" class="btn btn-outline">Batal</a>
-              <button type="submit" class="btn btn-primary">Simpan Kategori</button>
+              <button name="store" type="submit" class="btn btn-primary">Simpan Kategori</button>
             </div>
           </div>
         </form>
