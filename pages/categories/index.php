@@ -1,6 +1,8 @@
 <?php
 $pageTitle = 'Manajemen Kategori';
 $pageSubtitle = 'Kelola kategori untuk mengelompokkan buku';
+require_once __DIR__ . '/../../repositories/category-repository.php';
+$categories = getCategories();
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -11,9 +13,7 @@ $pageSubtitle = 'Kelola kategori untuk mengelompokkan buku';
   <link rel="stylesheet" href="../../styles/categories/index.css">
 </head>
 <body>
-  <?php
-  $category = ["id" => 1, "name" => "Fiksi", "description" => "Novel dan cerita rekaan", "total_books" => 3];
-  ?>
+
   <div class="app-shell">
 <?php require __DIR__ . '/../../components/admin/sidebar.php'; ?>
     <main class="app-main">
@@ -41,6 +41,7 @@ $pageSubtitle = 'Kelola kategori untuk mengelompokkan buku';
               </tr>
             </thead>
             <tbody>
+            <?php foreach ($categories as $index => $category) : ?>
               <tr>
                 <td>
                   <div class="cell-primary">
@@ -57,6 +58,7 @@ $pageSubtitle = 'Kelola kategori untuk mengelompokkan buku';
                   </div>
                 </td>
               </tr>
+              <?php endforeach ?>
             </tbody>
           </table>
         </div>
