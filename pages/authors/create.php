@@ -16,7 +16,7 @@ $pageSubtitle = 'Daftarkan penulis baru ke sistem';
     <main class="app-main">
    <?php require __DIR__ . '/../../components/admin/topbar.php'; ?>
       <div class="app-content">
-        <form method="" action="">
+        <form method="post" action="../../actions/authors/store.php"></form>
           <div class="form-card">
             <div class="form-section-title">Data Penulis</div>
             <div class="form-group">
